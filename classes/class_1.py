@@ -4,7 +4,8 @@ class Car():
         self.make = make
         self.model = model
         self.year = year
-        self.odometer_reading = 0 # Adding one more attribute but not assigning it from the instance.
+        # Adding two more attributes but not assigning it from the instance initialization.
+        self.odometer_reading = 0 
         self.color = " "
     
     def get_descriptive_name(self):
