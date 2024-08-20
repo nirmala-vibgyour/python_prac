@@ -16,6 +16,6 @@
 /pandas_package/allFiles
 /pandas_package/pandas_venv
 /.ipynb_checkpoints
-/json_csv/report_1.json
-/json_csv/report_2.json
-/json_csv/data_venv
+/json_parse/sample.json
+/json_parse/.ipynb_checkpoints
+/json_parse/data_venv
