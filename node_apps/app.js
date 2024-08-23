@@ -47,15 +47,47 @@ fs.readdir('./', function(err, files) {
 
 // Event module
 const EventEmitter = require('events');
-const emitter = new EventEmitter();
+
+const Logger = require('./logger');
+// Logger object
+const logger = new Logger();
 
 // Register a listener
-emitter.on('messageLogged', function() {
-    console.log('Listener called')
-})
+logger.on('messageLogged', (arg) => {  
+    console.log('Listener called', arg)
+});
+
+
+logger.log('message');
 
 // Raise an event to listen
-emitter.emit('messageLogged');
+// emitter.emit('messageLogged');
 
+// event arguments whil raising an event
+// emitter.emit('messageLogged', {id: 1, url: 'http://'});
 
+// Raise: logging (data: message)
+
+// HTTP
+const http = require('http');
+
+// server is an event emitter
+const server = http.createServer((req, res) => {
+    if (req.url === '/') {
+        res.write('Hello World');
+        res.end();
+    }
+
+    if (req.url === '/api/courses') {
+        res.write(JSON.stringify([1, 2, 3]));
+        res.end();
+    }
+});
+
+// server.on('connection', (socket) => {
+//     console.log('New Connection!!');
+// });
+
+server.listen(3000);
+console.log('Listening on port 3000...');
 

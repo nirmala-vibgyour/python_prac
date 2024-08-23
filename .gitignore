@@ -29,3 +29,6 @@
 /csvParse/csv_venv
 /csvParse/ddl_rocket
 /apis/readme.md
+/apis/api_basic/node_modules
+/apis/api_basic/package.json
+/apis/api_basic/package-lock.json
