@@ -32,3 +32,9 @@
 /apis/api_basic/node_modules
 /apis/api_basic/package.json
 /apis/api_basic/package-lock.json
+/streamlit_app/website_app/Current+State+of+the+Program
+/dailyNewEmailDigest/.venv
+/dailyNewEmailDigest/.idea
+/createPythonPackage/.idea
+/createPythonPackage/.venv
+

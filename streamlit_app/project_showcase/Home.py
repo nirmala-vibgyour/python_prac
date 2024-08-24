@@ -1,18 +1,20 @@
 import streamlit as st
 import pandas as pd
+
 st.set_page_config(layout="wide")
 
 col1, col2 = st.columns(2)
 
 with col1:
-    st.image("images/photo.png", width=300)
+    st.image("images/photo.png")
 
 with col2:
     st.title("Ardit Dulce")
     content = """
-    Hi, I am Ardit Dulce. I live in Italy.
-    I work as instructor."""
-
+    Hi, I am Ardit Dulce. I am a Python programmer, teacher, and founder of PythonHow. I graduated in 2013 with B.tech.
+    I have worked with companies from various countries, such as the Center for Conservation Geography, tolllllllllllll.
+    I also work as instructor at XYZ.
+    """
     st.info(content)
 
 content2 = """
