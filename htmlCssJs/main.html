@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2</title>
+    <style>
+        html {
+            background-color: pink;
+        }
+        div {
+            background-color: aquamarine;
+        }
+        p {
+            display: block;
+            background-color: blueviolet;
+            margin: 20px;
+            padding: 40px;
+            margin-top: 0px;
+        }
+    </style>
+    <!--In this scenario, there is a left and right gap in some px, html body { margin:0px;} will make the div block touch
+    window, but what about the top gap, what is causing that since I have added no margin to div, html or body-->
+    <!--There is a margin collapsing of the body element and the p element.-->
+    <!--div has no margin-->
+</head>
+<body>
+    <div>
+        <p>nirmala Chowdhury</p>
+    </div>
+    
+</body>
+</html>
