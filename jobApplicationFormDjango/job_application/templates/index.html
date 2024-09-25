@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="mt-4 mb-4">Job Application Form</h1>
+<form method="post">
+{% csrf_token %}
+<div class="form-group mb-4">
+    <label for="firstName">First Name:</label>
+    <input class="form-control" type="text" id="firstName" name="firstName" value="" required>
+</div>
+<div class="form-group mb-4">
+    <label for="lastName">Last Name:</label>
+    <input class="form-control" type="text" id="lastName" name="lastName" value="" required>
+</div>
+<div class="form-group mb-4">
+    <label for="email">Email:</label>
+    <input class="form-control" type="email" id="email" name="email" value="" required>
+</div>
+<div class="form-group mb-4">
+    <label for="date">Available start date:</label>
+    <input class="form-control" type="date" id="date" name="date" value="" required>
+</div>
+<div class="form-group mb-4">
+    <label>Current occupation:</label><br>
+    <div class="btn-group-vertical" id="occupation">
+        <input class="btn-check form-control" type="radio" id="employed" name="occupation" value="employed" required>
+        <label class="btn btn-outline-secondary" for="employed">Employed</label>
+
+        <input class="btn-check form-control" type="radio" id="unemployed" name="occupation" value="unemployed" required>
+        <label class="btn btn-outline-secondary" for="employed">Unemployed</label>
+
+        <input class="btn-check form-control" type="radio" id="self_employed" name="occupation" value="self_employed" required>
+        <label class="btn btn-outline-secondary" for="self_employed">Self-Employed</label>
+
+        <input class="btn-check form-control" type="radio" id="student" name="occupation" value="student" required>
+        <label class="btn btn-outline-secondary" for="student">Student</label>
+    </div>
+</div>
+<button class="btn btn-secondary mb-4" type="submit">Submit</button>
+{% if messages %}
+<div class="alert alert-success">
+    {% for message in messages %}
+    {{ message }}
+    {% endfor %}
+</div>
+{% endif %}
+</form>
+{% endblock %}
