@@ -1,0 +1,2931 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- DW6 -->
+<head>
+<!-- Copyright 2005 Macromedia, Inc. All rights reserved. -->
+<meta http-equiv="Refresh" content="300" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="ICBM" content="37.27465, -122.02295" />
+<meta name="DC.title" content="Estes Park, Colorado Weather Station" />
+<meta name="author" content="Gregory Truta" />
+<meta name="copyright" content="&copy; 2007 EstesParkWeather.net" />
+<meta name="Keywords" content="weather, Weather, temperature, dew point, humidity, forecast, Davis Vantage Pro, Estes Park Colorado Weather, Colorado Weather, CO Weather, weather conditions, live weather, live weather conditions, weather data, weather history, WeatherLink, Weather-Display" />
+<meta name="Description" content="Weather conditions for Estes Park, Colorado" />
+<link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon" />
+<title>Estes Park Weather - Home/Forecasts</title>
+<link rel="stylesheet" href="WX.css" type="text/css" />
+<style type="text/css">
+<!-- 
+.data {
+ 	color: #000000;
+	 font-family: Verdana, Arial, Helvetica, sans-serif;
+	 font-size: 9pt;
+	 border-bottom: 1px solid #CCCCCC;
+	 background-color: #FFFFFF;
+	 text-align: left;
+}
+
+.datahead {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	color:  #FFFFFF;
+	background-color: #212757;
+	text-align: center;	
+}
+.data1 { 	color: #000000;
+	 font-family: Verdana, Arial, Helvetica, sans-serif;
+	 font-size: 9pt;
+	 border-bottom: 1px solid #CCCCCC;
+	 background-color: #FFFFFF;
+	 text-align: left;
+}
+.style1 {font-weight: bold}
+.style2 {
+	color: #990000;
+	font-weight: bold;
+}
+-->
+</style>
+<script type="text/javascript" src="setColHeight.js"></script>
+<!-- begin dropdown-menu.php CSS definition -->
+<style type="text/css">
+/* ================================================================ 
+This copyright notice must be untouched at all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/final_drop5.html
+Copyright (c) 2005-2007 Stu Nicholls. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any 
+way to fit your requirements.
+=================================================================== */
+/*
+  adapted for use with dropdown-menu.php menu generator by
+  Ken True - Saratoga-Weather.org - 9-Aug-2007                      
+                                                                    */
+/* style the outer div to give it width */
+.dropdownmenu {font-size:0.75em;padding-bottom:1px;margin-left: 5px;}
+
+/* remove all the bullets, borders and padding from the default list styling */
+.dropdownmenu ul {padding:0;margin:0;list-style-type:none; height:1.5em; background:#0033ff; 
+  position: relative; z-index: 10;} /* added to fix menu-over-buoy-map issue */
+
+/* style the sub-level lists */
+.dropdownmenu ul ul {width:15em;left: 100%; top:100%;}
+
+/* float the top list items to make it horizontal and a relative positon so that you can control the dropdown menu positon */
+.dropdownmenu ul li {float:left;height:1.5em;line-height:1.5em;}
+
+/* style the sub level list items */
+.dropdownmenu ul ul li {display:block;width:12em;height:auto; line-height:1em;}
+
+/* style the links for the top level */
+.dropdownmenu a, .dropdownmenu a:visited {display:block;float:left;height:100%;font-size:1em;text-decoration:none;color:#FFFFFF;background:#0066FF;font-weight: bold;padding:0 1em 0 1em; border:1px solid #E0E0E0;}
+
+/* style the sub level links */
+.dropdownmenu ul ul a, .dropdownmenu ul ul a:visited {display:block;float:none; background:#d4d8bd; color:#000000;width:12em;height:100%;line-height:1em; padding:0.25em 1em;}
+* html .dropdownmenu ul ul a, * html .dropdownmenu ul ul a:visited  {width:14em; w\idth:12em;}
+
+
+/* style the table so that it takes no part in the layout - required for IE to work */
+.dropdownmenu table {position:absolute; left:1px; top:0; width:0; height:0; font-size:1em; z-index:-1;}
+
+
+/* style the third level background */
+.dropdownmenu ul ul ul a, .dropdownmenu ul ul ul a:visited {background:#b4be9c;}
+/* style the fourth level background */
+.dropdownmenu ul ul ul ul a, .dropdownmenu ul ul ul ul a:visited {background:#d4d8bd;}
+/* style the sub level 1 background */
+.dropdownmenu ul :hover a.sub1 {background:#d4d8bd;}
+/* style the sub level 2 background */
+.dropdownmenu ul ul :hover a.sub2 {background:#b4be9c;}
+
+/* style the level hovers */
+/* first */
+* html .dropdownmenu a:hover {color:#000000;background:#d4d8bd; position:relative; z-index:100;}
+.dropdownmenu li:hover {position:relative;}
+.dropdownmenu :hover > a {color:#0000FF;background:#d4d8bd;}
+/* second */
+* html .dropdownmenu ul ul a:hover{color:#0000FF;background:#d4d8bd; position:relative; z-index:110;}
+.dropdownmenu ul ul li:hover {position:relative;}
+.dropdownmenu ul ul :hover > a {color:#0000FF;background:#b4be9c;}
+/* third */
+* html .dropdownmenu ul ul ul a:hover {background:#b4be9c; position:relative; z-index:120;}
+.dropdownmenu ul ul ul :hover > a {color:#0000FF;background:#c4ceac;}
+/* fourth */
+.dropdownmenu ul ul ul ul a:hover {background:#b4be9c; position:relative; z-index:130;}
+
+
+/* hide the sub levels and give them a positon absolute so that they take up no room */
+.dropdownmenu ul ul {visibility:hidden;position:absolute;height:0;top:1.5em;left:0;width:14em;}
+
+/* position the third level flyout menu */
+.dropdownmenu ul ul ul{left:12em;top:0;width:14em;}
+
+
+/* make the second level visible when hover on first level list OR link */
+.dropdownmenu ul :hover ul{visibility:visible; height:auto; padding-bottom:3em; 
+  background:transparent url(/images/trans.gif);}
+/* keep the third level hidden when you hover on first level list OR link */
+.dropdownmenu ul :hover ul ul{visibility:hidden;}
+/* keep the fourth level hidden when you hover on second level list OR link */
+.dropdownmenu ul :hover ul :hover ul ul{visibility:hidden;}
+/* make the third level visible when you hover over second level list OR link */
+.dropdownmenu ul :hover ul :hover ul{visibility:visible;}
+/* make the fourth level visible when you hover over third level list OR link */
+.dropdownmenu ul :hover ul :hover ul :hover ul {visibility:visible;}
+/* end of wx-menu.css */
+</style>
+<!--[if lte IE 6]>
+<style type="text/css">
+.dropdownmenu ul ul {left:-1px; margin-left:-1px;}
+.dropdownmenu ul ul ul.left {margin-left:1px;}
+</style>
+<![endif]-->
+<!-- end of dropdown-menu.php CSS definition -->
+</head>
+<!-- The structure of this file is exactly the same as 2col_rightNav.html;
+     the only difference between the two is the stylesheet they use -->
+<!--<body onload="JavaScript: setColHeight();" >-->
+<body onload="JavaScript: ajaxLoader('clientraw.txt?'+new Date()); setColHeight();" >
+<!-- advforecast2.php (JSON) - V5.19 - 27-Dec-2022 on PHP 7.4.33-->
+<!-- RAW NWS URL: https://forecast.weather.gov/MapClick.php?lat=40.3668&lon=-105.5064&unit=0&lg=english&FcstType=text&TextType=2  zone=COZ035 -->
+<!-- meta info re: point='40.3668,-105.5064' zone='zones' metacache= './forecast-COZ035-0-geojson-meta.txt' -->
+<!-- metaZoneURL='https://api.weather.gov/zones/forecast/COZ035' -->
+<!-- meta cache ./forecast-COZ035-0-geojson-meta.txt age=6:41:38 h:m:s -->
+<!-- loaded meta info from ./forecast-COZ035-0-geojson-meta.txt age=6:41:38 h:m:s -->
+<!-- META
+array (
+  'city' => 'Estes Park',
+  'state' => 'CO',
+  'point' => '40.3668,-105.5064',
+  'forecastOfficeURL' => 'https://api.weather.gov/offices/BOU',
+  'forecastURL' => 'https://api.weather.gov/gridpoints/BOU/47,91/forecast',
+  'forecastZoneURL' => 'https://api.weather.gov/zones/forecast/COZ035',
+  'forecastZone' => 'COZ035',
+  'forecastHourlyURL' => 'https://api.weather.gov/gridpoints/BOU/47,91/forecast/hourly',
+  'forecastGridDataURL' => 'https://api.weather.gov/gridpoints/BOU/47,91',
+  'observationStationsURL' => 'https://api.weather.gov/gridpoints/BOU/47,91/stations',
+  'countyZoneURL' => 'https://api.weather.gov/zones/county/COC069',
+  'countyZone' => 'COC069',
+  'fireWeatherZoneURL' => 'https://api.weather.gov/zones/fire/COZ215',
+  'fireWeatherZone' => 'COZ215',
+  'timeZone' => 'America/Denver',
+  'radarStation' => 'KFTG',
+  'zoneName' => 'Larimer and Boulder Counties Between 6000 and 9000 Feet',
+  'WFOname' => 'Denver/Boulder, CO',
+  'WFOphone' => '303-494-3210 for a recording call 303-494-4221',
+  'WFOemail' => 'nws.boulder@noaa.gov',
+) -->
+<!-- point forecastURL = 'https://api.weather.gov/gridpoints/BOU/47,91/forecast' -->
+<!-- zone  forecastURL = 'https://api.weather.gov/zones/forecast/COZ035/forecast' -->
+<!-- loaded cache file ./forecast-COZ035-0-geojson.txt - 13547 bytes -->
+<!-- point forecast processing -->
+
+<!-- forecast updated '2024-09-25T08:07:34+00:00' (2:07 am MDT Sep 25, 2024) for lat,long or zone '47,91' -->
+<!-- alerts loaded from ./forecast-COZ035-0-geojson-alerts.txt -->
+<!-- no current hazard alerts for COZ035 -->
+ <div id="masthead">
+<div id="header"><img src="images/estes4.jpg" alt="Live, Local Weather for Estes Park,  Colorado" width="799" height="142" /></div>
+  <div class="dropdownmenu"><!-- begin generated dropdown menu -->
+<!-- dropdown-menu.php Version 1.03 - 08-Dec-2012 -->
+<!-- by Ken True - webmaster[at]saratoga-weather.org -->
+<!-- Adapted from Stu Nicholl's CSS/XHTML at http://www.cssplay.co.uk/menus/final_drop5.html -->
+<!-- script available at http://saratoga-weather.org/scripts-CSSmenu.php#dropdown -->
+<ul>
+  <li><a href="/index.php" title="Home Page for EstesParkWeather.net">Home</a></li>
+  <li><a href="./wx/wxindex.php" title="New Home Page for EstesParkWeather.net">Preview New Website</a></li>
+  <li><a href="#" title="ExceptionalWeather.com Webcams">Webcams<!--[if IE 7]><!--></a><!--<![endif]-->
+    <!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+    <li><a href="/webcam.php">Estes Park, Colorado Webcam</a></li>
+    <li><a href="/webcam2.php">Archive/Time-Lapse Estes Park Webcam</a></li>
+    <li><a href="http://www.sangredecristoweather.com/">Sangre de Cristo Weather Station, Westcliffe, CO</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+  <li><a href="./wx/wxnwsradar.php" title="Radar from NWS">Radar</a></li>
+  <li><a href="/weather_forecast.php" title="NWS Forecasts">Forecasts<!--[if IE 7]><!--></a><!--<![endif]-->
+    <!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+    <li><a href="/weather_forecast.php">Forecast- Estes Park, Colorado and Vicinity</a></li>
+    <li><a href="/weather_forecast_area.php#area">Area Forecast Discussion</a></li>
+    <li><a href="/weather_forecast.php#hazard">Hazardous Weather Outlook</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+  <li><a href="#" title="Realtime display of weather conditions">Live<!--[if IE 7]><!--></a><!--<![endif]-->
+    <!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+    <li><a href="/live.php">Weather-Display Live</a></li>
+    <li><a href="/webcam.php">Estes Park Webcam</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+  <li><a href="#" title="Forecasts, Reports, UV Index, Trends, Sun/Moon, Climate">Almanac<!--[if IE 7]><!--></a><!--<![endif]-->
+    <!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+    <li><a href="/trends.php">Weather Trends</a></li>
+    <li><a href="/graphs.php">Station Graphs</a></li>
+    <li><a href="./wx/wxhistory.php">Station Monthly Historical Reports</a></li>
+    <li><a href="/noaa_reports.php">NOAA Monthly/Annual Reports</a></li>
+    <li><a href="/almanac.php">Sun/Moon Almanac</a></li>
+    <li><a href="/uv-index.php">UV Index</a></li>
+    <li><a href="/climate.php">On Colorado's Climate</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+  <li><a href="#" title="Regional Weather, Radar, USA Forecast">Weather Maps<!--[if IE 7]><!--></a><!--<![endif]-->
+    <!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+    <li><a href="/mesomap.php">Rocky Mountain Weather Network</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+  <li><a href="#" title="About us, website map">About<!--[if IE 7]><!--></a><!--<![endif]-->
+    <!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+    <li><a href="/station.php">About EstesParkWeather.net</a></li>
+    <li><a href="/contact.php">Contact Information</a></li>
+    <li><a href="/sitemap.php">Website Map</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+</ul>
+<!-- end generated dropdown menu -->
+</div>
+</div>
+  <!-- end masthead -->
+<div id="content">
+    <h1 id="pageName"> Daily / Monthly Weather History for EstesParkWeather.net Weather Station </h1>
+
+      <div class = "story">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Estes 2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6752802857747974"
+     data-ad-slot="5550205243"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<BR>
+ <!-- mchallis begin added for toggle 24 Hour Daily Chart images -->
+<script type="text/javascript" language="JavaScript">
+function toggleDisplay(imgID) {
+   if(document.getElementById(imgID).style.display == "none" ) {
+            document.getElementById(imgID).style.display = "";
+   } else {
+            document.getElementById(imgID).style.display = "none";
+   }
+}
+</script>
+<!-- mchallis end added for toggle 24 Hour Daily Chart images -->
+</head>
+<body>
+<!-- begin of javascript 'go to top' arrow >
+
+<div id="floatdiv" class="jsupoutline">
+    <a href="#header" title="Goto Top of Page" class="jsuparrow">
+    <img src="toparrow.gif" alt="^^" 
+	style="border: 0px;" /></a>
+
+</div>
+<script src="floatTop.js" type="text/javascript"></script>
+-->
+<!-- end of javascript 'go to top' arrow -->
+
+<div id="main-copy">
+
+<!--<h3>Daily / Monthly Weather History From This Station</h3>
+<br />
+-->
+
+<form action="" method="get">
+        <fieldset>
+                <legend>Select a report and click submit:</legend>
+                <select name="date">
+<option value="202409">September 2024</option>
+<option value="202408" selected="selected">August 2024</option>
+<option value="202407">July 2024</option>
+<option value="202406">June 2024</option>
+<option value="202405">May 2024</option>
+<option value="202404">April 2024</option>
+<option value="202403">March 2024</option>
+<option value="202402">February 2024</option>
+<option value="202401">January 2024</option>
+<option value="202312">December 2023</option>
+<option value="202311">November 2023</option>
+<option value="202310">October 2023</option>
+<option value="202309">September 2023</option>
+<option value="202308">August 2023</option>
+<option value="202307">July 2023</option>
+<option value="202306">June 2023</option>
+<option value="202305">May 2023</option>
+<option value="202304">April 2023</option>
+<option value="202303">March 2023</option>
+<option value="202302">February 2023</option>
+<option value="202301">January 2023</option>
+<option value="202212">December 2022</option>
+<option value="202211">November 2022</option>
+<option value="202210">October 2022</option>
+<option value="202209">September 2022</option>
+<option value="202208">August 2022</option>
+<option value="202207">July 2022</option>
+<option value="202206">June 2022</option>
+<option value="202205">May 2022</option>
+<option value="202204">April 2022</option>
+<option value="202203">March 2022</option>
+<option value="202202">February 2022</option>
+<option value="202201">January 2022</option>
+<option value="202112">December 2021</option>
+<option value="202111">November 2021</option>
+<option value="202110">October 2021</option>
+<option value="202109">September 2021</option>
+<option value="202108">August 2021</option>
+<option value="202107">July 2021</option>
+<option value="202106">June 2021</option>
+<option value="202105">May 2021</option>
+<option value="202104">April 2021</option>
+<option value="202103">March 2021</option>
+<option value="202102">February 2021</option>
+<option value="202101">January 2021</option>
+<option value="202012">December 2020</option>
+<option value="202011">November 2020</option>
+<option value="202010">October 2020</option>
+<option value="202009">September 2020</option>
+<option value="202008">August 2020</option>
+<option value="202007">July 2020</option>
+<option value="202006">June 2020</option>
+<option value="202005">May 2020</option>
+<option value="202004">April 2020</option>
+<option value="202003">March 2020</option>
+<option value="202002">February 2020</option>
+<option value="202001">January 2020</option>
+<option value="201912">December 2019</option>
+<option value="201911">November 2019</option>
+<option value="201910">October 2019</option>
+<option value="201909">September 2019</option>
+<option value="201908">August 2019</option>
+<option value="201907">July 2019</option>
+<option value="201906">June 2019</option>
+<option value="201905">May 2019</option>
+<option value="201904">April 2019</option>
+<option value="201903">March 2019</option>
+<option value="201902">February 2019</option>
+<option value="201901">January 2019</option>
+<option value="201812">December 2018</option>
+<option value="201811">November 2018</option>
+<option value="201810">October 2018</option>
+<option value="201809">September 2018</option>
+<option value="201808">August 2018</option>
+<option value="201807">July 2018</option>
+<option value="201806">June 2018</option>
+<option value="201805">May 2018</option>
+<option value="201804">April 2018</option>
+<option value="201803">March 2018</option>
+<option value="201802">February 2018</option>
+<option value="201801">January 2018</option>
+<option value="201712">December 2017</option>
+<option value="201711">November 2017</option>
+<option value="201710">October 2017</option>
+<option value="201709">September 2017</option>
+<option value="201708">August 2017</option>
+<option value="201707">July 2017</option>
+<option value="201706">June 2017</option>
+<option value="201705">May 2017</option>
+<option value="201704">April 2017</option>
+<option value="201703">March 2017</option>
+<option value="201702">February 2017</option>
+<option value="201701">January 2017</option>
+<option value="201612">December 2016</option>
+<option value="201611">November 2016</option>
+<option value="201610">October 2016</option>
+<option value="201609">September 2016</option>
+<option value="201608">August 2016</option>
+<option value="201607">July 2016</option>
+<option value="201606">June 2016</option>
+<option value="201605">May 2016</option>
+<option value="201604">April 2016</option>
+<option value="201603">March 2016</option>
+<option value="201602">February 2016</option>
+<option value="201601">January 2016</option>
+<option value="201512">December 2015</option>
+<option value="201511">November 2015</option>
+<option value="201510">October 2015</option>
+<option value="201509">September 2015</option>
+<option value="201508">August 2015</option>
+<option value="201507">July 2015</option>
+<option value="201506">June 2015</option>
+<option value="201505">May 2015</option>
+<option value="201504">April 2015</option>
+<option value="201503">March 2015</option>
+<option value="201502">February 2015</option>
+<option value="201501">January 2015</option>
+<option value="201412">December 2014</option>
+<option value="201411">November 2014</option>
+<option value="201410">October 2014</option>
+<option value="201409">September 2014</option>
+<option value="201408">August 2014</option>
+<option value="201407">July 2014</option>
+<option value="201406">June 2014</option>
+<option value="201405">May 2014</option>
+<option value="201404">April 2014</option>
+<option value="201403">March 2014</option>
+<option value="201402">February 2014</option>
+<option value="201401">January 2014</option>
+<option value="201312">December 2013</option>
+<option value="201311">November 2013</option>
+<option value="201310">October 2013</option>
+<option value="201309">September 2013</option>
+<option value="201308">August 2013</option>
+<option value="201307">July 2013</option>
+<option value="201306">June 2013</option>
+<option value="201305">May 2013</option>
+<option value="201304">April 2013</option>
+<option value="201303">March 2013</option>
+<option value="201302">February 2013</option>
+<option value="201301">January 2013</option>
+<option value="201212">December 2012</option>
+<option value="201211">November 2012</option>
+<option value="201210">October 2012</option>
+<option value="201209">September 2012</option>
+<option value="201208">August 2012</option>
+<option value="201207">July 2012</option>
+<option value="201206">June 2012</option>
+<option value="201205">May 2012</option>
+<option value="201204">April 2012</option>
+<option value="201203">March 2012</option>
+<option value="201202">February 2012</option>
+<option value="201201">January 2012</option>
+<option value="201112">December 2011</option>
+<option value="201111">November 2011</option>
+<option value="201110">October 2011</option>
+<option value="201109">September 2011</option>
+<option value="201108">August 2011</option>
+<option value="201107">July 2011</option>
+<option value="201106">June 2011</option>
+<option value="201105">May 2011</option>
+<option value="201104">April 2011</option>
+<option value="201103">March 2011</option>
+<option value="201102">February 2011</option>
+<option value="201101">January 2011</option>
+<option value="201012">December 2010</option>
+<option value="201011">November 2010</option>
+<option value="201010">October 2010</option>
+<option value="201009">September 2010</option>
+<option value="201008">August 2010</option>
+<option value="201007">July 2010</option>
+<option value="201006">June 2010</option>
+<option value="201005">May 2010</option>
+<option value="201004">April 2010</option>
+<option value="201003">March 2010</option>
+<option value="201002">February 2010</option>
+<option value="201001">January 2010</option>
+<option value="200912">December 2009</option>
+<option value="200911">November 2009</option>
+<option value="200910">October 2009</option>
+<option value="200909">September 2009</option>
+<option value="200908">August 2009</option>
+<option value="200907">July 2009</option>
+<option value="200906">June 2009</option>
+<option value="200905">May 2009</option>
+<option value="200904">April 2009</option>
+<option value="200903">March 2009</option>
+<option value="200902">February 2009</option>
+<option value="200901">January 2009</option>
+<option value="200812">December 2008</option>
+<option value="200811">November 2008</option>
+<option value="200810">October 2008</option>
+<option value="200809">September 2008</option>
+<option value="200808">August 2008</option>
+<option value="200807">July 2008</option>
+<option value="200806">June 2008</option>
+<option value="200805">May 2008</option>
+<option value="200804">April 2008</option>
+<option value="200803">March 2008</option>
+<option value="200802">February 2008</option>
+<option value="200801">January 2008</option>
+<option value="200712">December 2007</option>
+<option value="200711">November 2007</option>
+<option value="200710">October 2007</option>
+<option value="200709">September 2007</option>
+<option value="200708">August 2007</option>
+<option value="200707">July 2007</option>
+<option value="200706">June 2007</option>
+<option value="200705">May 2007</option>
+<option value="200704">April 2007</option>
+<option value="200703">March 2007</option>
+<option value="200702">February 2007</option>
+<option value="200701">January 2007</option>
+<option value="200612">December 2006</option>
+<option value="200611">November 2006</option>
+<option value="200610">October 2006</option>
+<option value="200609">September 2006</option>
+<option value="200608">August 2006</option>
+<option value="200607">July 2006</option>
+<option value="200606">June 2006</option>
+<option value="200605">May 2006</option>
+<option value="200604">April 2006</option>
+<option value="200603">March 2006</option>
+<option value="200602">February 2006</option>
+<option value="200601">January 2006</option>
+<option value="200512">December 2005</option>
+<option value="200511">November 2005</option>
+<option value="200510">October 2005</option>
+<option value="200509">September 2005</option>
+<option value="200508">August 2005</option>
+<option value="200507">July 2005</option>
+<option value="200506">June 2005</option>
+<option value="200505">May 2005</option>
+<option value="200504">April 2005</option>
+<option value="200503">March 2005</option>
+<option value="200502">February 2005</option>
+<option value="200501">January 2005</option>
+                </select>
+                <input type="submit" value="submit" />
+        </fieldset>
+</form>
+
+<noscript>
+<p>Javascript must be enabled to view the 24 Hour Graph images.</p>
+</noscript>
+
+<h1>Daily Report for the month of August 2024</h1>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 1 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-light">
+                <td>Average temperature</td><td> 68.0�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average humidity</td><td> 34%</td>
+                </tr>
+<tr class="column-light">
+                <td>Average dewpoint</td><td> 34.9�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average barometer</td><td> 29.9 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Average windspeed</td><td> 2.4 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average gustspeed</td><td> 4.2 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average direction</td><td> 80� ( E )</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for month</td><td> 0.00 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for year</td><td> 7.06 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum rain per minute</td><td> 0.00 in. on day 01 at time 00:00</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum temperature</td><td> 88.2�F on day 01 at time 13:13</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum temperature</td><td> 43.3�F on day 01 at time 06:33</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum humidity</td><td> 72% on day 01 at time 06:45</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum humidity</td><td> 13% on day 01 at time 11:22</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum pressure</td><td> 29.912 in. on day 01 at time 22:38</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum pressure</td><td> 29.799 in. on day 01 at time 00:35</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum windspeed</td><td> 13.8 mph on day 01 at time 15:30</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum gust speed</td><td> 19.6 mph  from 072 �(ENE) on day 01 at time 15:35</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum heat index</td><td> 84.4�F on day 01 at time 13:13</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240801.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 2 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-dark">
+                <td>Average temperature</td><td> 68.4�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average humidity</td><td> 41%</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average dewpoint</td><td> 40.5�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average barometer</td><td> 29.9 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average windspeed</td><td> 2.4 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average gustspeed</td><td> 4.1 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average direction</td><td> 47� ( NE)</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for month</td><td> 0.01 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for year</td><td> 7.07 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum rain per minute</td><td> 0.01 in. on day 02 at time 18:17</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum temperature</td><td> 90.5�F on day 02 at time 12:25</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum temperature</td><td> 48.0�F on day 02 at time 06:35</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum humidity</td><td> 69% on day 02 at time 20:08</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum humidity</td><td> 9% on day 02 at time 12:29</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum pressure</td><td> 29.914 in. on day 02 at time 22:19</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum pressure</td><td> 29.764 in. on day 02 at time 16:38</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum windspeed</td><td> 18.4 mph on day 02 at time 17:43</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum gust speed</td><td> 21.9 mph  from 028 �(NNE) on day 02 at time 17:42</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum heat index</td><td> 86.3�F on day 02 at time 12:25</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240802.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 3 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-light">
+                <td>Average temperature</td><td> 67.6�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average humidity</td><td> 43%</td>
+                </tr>
+<tr class="column-light">
+                <td>Average dewpoint</td><td> 40.1�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average barometer</td><td> 29.8 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Average windspeed</td><td> 2.4 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average gustspeed</td><td> 4.5 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average direction</td><td> 64� (ENE)</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for month</td><td> 0.01 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for year</td><td> 7.07 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum rain per minute</td><td> 0.00 in. on day 03 at time 23:59</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum temperature</td><td> 86.8�F on day 03 at time 13:46</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum temperature</td><td> 45.4�F on day 03 at time 06:36</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum humidity</td><td> 79% on day 03 at time 06:35</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum humidity</td><td> 17% on day 03 at time 13:49</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum pressure</td><td> 29.910 in. on day 03 at time 00:05</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum pressure</td><td> 29.775 in. on day 03 at time 19:27</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum windspeed</td><td> 12.7 mph on day 03 at time 17:26</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum gust speed</td><td> 19.6 mph  from 052 �( NE) on day 03 at time 15:29</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum heat index</td><td> 83.4�F on day 03 at time 13:45</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240803.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 4 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-dark">
+                <td>Average temperature</td><td> 68.2�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average humidity</td><td> 44%</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average dewpoint</td><td> 43.0�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average barometer</td><td> 29.7 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average windspeed</td><td> 4.3 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average gustspeed</td><td> 7.2 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average direction</td><td> 268� ( W )</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for month</td><td> 0.02 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for year</td><td> 7.08 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum rain per minute</td><td> 0.01 in. on day 04 at time 19:56</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum temperature</td><td> 92.4�F on day 04 at time 13:41</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum temperature</td><td> 47.9�F on day 04 at time 06:27</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum humidity</td><td> 76% on day 04 at time 21:26</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum humidity</td><td> 18% on day 04 at time 13:24</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum pressure</td><td> 29.806 in. on day 04 at time 00:07</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum pressure</td><td> 29.630 in. on day 04 at time 13:38</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum windspeed</td><td> 16.1 mph on day 04 at time 11:39</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum gust speed</td><td> 27.6 mph  from 126 �( SE) on day 04 at time 18:56</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum heat index</td><td> 88.7�F on day 04 at time 13:41</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240804.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 5 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-light">
+                <td>Average temperature</td><td> 68.1�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average humidity</td><td> 54%</td>
+                </tr>
+<tr class="column-light">
+                <td>Average dewpoint</td><td> 49.4�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average barometer</td><td> 29.7 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Average windspeed</td><td> 3.1 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average gustspeed</td><td> 5.3 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average direction</td><td> 7� ( N )</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for month</td><td> 0.13 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for year</td><td> 7.19 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum rain per minute</td><td> 0.01 in. on day 05 at time 16:23</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum temperature</td><td> 82.9�F on day 05 at time 12:12</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum temperature</td><td> 54.5�F on day 05 at time 23:59</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum humidity</td><td> 87% on day 05 at time 17:02</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum humidity</td><td> 26% on day 05 at time 10:16</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum pressure</td><td> 29.862 in. on day 05 at time 23:02</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum pressure</td><td> 29.644 in. on day 05 at time 03:43</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum windspeed</td><td> 21.9 mph on day 05 at time 14:53</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum gust speed</td><td> 34.5 mph  from 340 �(NNW) on day 05 at time 14:49</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum heat index</td><td> 81.1�F on day 05 at time 12:12</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240805.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 6 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-dark">
+                <td>Average temperature</td><td> 65.1�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average humidity</td><td> 64%</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average dewpoint</td><td> 50.4�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average barometer</td><td> 29.8 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average windspeed</td><td> 1.8 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average gustspeed</td><td> 3.3 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average direction</td><td> 45� ( NE)</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for month</td><td> 0.14 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for year</td><td> 7.20 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum rain per minute</td><td> 0.01 in. on day 06 at time 18:36</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum temperature</td><td> 84.8�F on day 06 at time 13:11</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum temperature</td><td> 47.9�F on day 06 at time 06:36</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum humidity</td><td> 94% on day 06 at time 06:59</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum humidity</td><td> 28% on day 06 at time 17:10</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum pressure</td><td> 29.886 in. on day 06 at time 06:57</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum pressure</td><td> 29.721 in. on day 06 at time 18:50</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum windspeed</td><td> 12.7 mph on day 06 at time 13:19</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum gust speed</td><td> 17.3 mph  from 040 �( NE) on day 06 at time 13:18</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum heat index</td><td> 82.9�F on day 06 at time 13:11</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240806.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 7 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-light">
+                <td>Average temperature</td><td> 67.7�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average humidity</td><td> 48%</td>
+                </tr>
+<tr class="column-light">
+                <td>Average dewpoint</td><td> 45.1�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average barometer</td><td> 29.7 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Average windspeed</td><td> 5.3 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average gustspeed</td><td> 9.1 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average direction</td><td> 286� (WNW)</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for month</td><td> 0.20 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for year</td><td> 7.26 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum rain per minute</td><td> 0.01 in. on day 07 at time 16:36</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum temperature</td><td> 83.5�F on day 07 at time 13:19</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum temperature</td><td> 51.4�F on day 07 at time 02:36</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum humidity</td><td> 81% on day 07 at time 02:39</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum humidity</td><td> 23% on day 07 at time 15:02</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum pressure</td><td> 29.771 in. on day 07 at time 00:15</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum pressure</td><td> 29.604 in. on day 07 at time 13:38</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum windspeed</td><td> 20.7 mph on day 07 at time 14:46</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum gust speed</td><td> 29.9 mph  from 207 �(SSW) on day 07 at time 14:43</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum heat index</td><td> 81.4�F on day 07 at time 12:41</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240807.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 8 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-dark">
+                <td>Average temperature</td><td> 56.9�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average humidity</td><td> 84%</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average dewpoint</td><td> 51.9�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average barometer</td><td> 29.8 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average windspeed</td><td> 2.5 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average gustspeed</td><td> 4.5 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average direction</td><td> 47� ( NE)</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for month</td><td> 0.20 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for year</td><td> 7.26 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum rain per minute</td><td> 0.00 in. on day 08 at time 23:59</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum temperature</td><td> 64.7�F on day 08 at time 14:28</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum temperature</td><td> 50.3�F on day 08 at time 03:11</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum humidity</td><td> 92% on day 08 at time 08:37</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum humidity</td><td> 67% on day 08 at time 14:28</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum pressure</td><td> 29.910 in. on day 08 at time 22:49</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum pressure</td><td> 29.719 in. on day 08 at time 00:00</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum windspeed</td><td> 11.5 mph on day 08 at time 17:58</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum gust speed</td><td> 16.1 mph  from 015 �(NNE) on day 08 at time 17:58</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum heat index</td><td> 64.7�F on day 08 at time 14:28</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240808.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 9 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-light">
+                <td>Average temperature</td><td> 54.0�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average humidity</td><td> 88%</td>
+                </tr>
+<tr class="column-light">
+                <td>Average dewpoint</td><td> 50.4�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average barometer</td><td> 29.9 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Average windspeed</td><td> 2.5 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average gustspeed</td><td> 4.4 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average direction</td><td> 43� ( NE)</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for month</td><td> 0.45 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for year</td><td> 7.51 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum rain per minute</td><td> 0.03 in. on day 09 at time 11:20</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum temperature</td><td> 64.3�F on day 09 at time 16:42</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum temperature</td><td> 49.0�F on day 09 at time 23:59</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum humidity</td><td> 97% on day 09 at time 08:55</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum humidity</td><td> 63% on day 09 at time 16:44</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum pressure</td><td> 30.002 in. on day 09 at time 13:08</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum pressure</td><td> 29.859 in. on day 09 at time 17:02</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum windspeed</td><td> 17.3 mph on day 09 at time 12:30</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum gust speed</td><td> 24.2 mph  from 354 �( N ) on day 09 at time 12:30</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum heat index</td><td> 64.3�F on day 09 at time 16:42</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240809.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 10 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-dark">
+                <td>Average temperature</td><td> 58.3�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average humidity</td><td> 73%</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average dewpoint</td><td> 49.2�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average barometer</td><td> 29.9 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average windspeed</td><td> 3.2 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average gustspeed</td><td> 5.4 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average direction</td><td> 19� (NNE)</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for month</td><td> 0.54 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for year</td><td> 7.60 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum rain per minute</td><td> 0.01 in. on day 10 at time 17:20</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum temperature</td><td> 72.4�F on day 10 at time 11:03</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum temperature</td><td> 46.3�F on day 10 at time 03:29</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum humidity</td><td> 97% on day 10 at time 05:33</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum humidity</td><td> 46% on day 10 at time 10:42</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum pressure</td><td> 29.986 in. on day 10 at time 00:01</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum pressure</td><td> 29.803 in. on day 10 at time 22:21</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum windspeed</td><td> 24.2 mph on day 10 at time 14:09</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum gust speed</td><td> 31.1 mph  from 015 �(NNE) on day 10 at time 14:10</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum heat index</td><td> 77.3�F on day 10 at time 15:35</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240810.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 11 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-light">
+                <td>Average temperature</td><td> 64.2�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average humidity</td><td> 53%</td>
+                </tr>
+<tr class="column-light">
+                <td>Average dewpoint</td><td> 45.2�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average barometer</td><td> 29.8 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Average windspeed</td><td> 5.4 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average gustspeed</td><td> 9.4 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average direction</td><td> 297� (WNW)</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for month</td><td> 0.54 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for year</td><td> 7.60 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum rain per minute</td><td> 0.00 in. on day 11 at time 23:59</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum temperature</td><td> 79.4�F on day 11 at time 15:30</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum temperature</td><td> 49.3�F on day 11 at time 06:09</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum humidity</td><td> 89% on day 11 at time 07:13</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum humidity</td><td> 23% on day 11 at time 15:31</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum pressure</td><td> 29.832 in. on day 11 at time 07:22</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum pressure</td><td> 29.699 in. on day 11 at time 19:00</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum windspeed</td><td> 27.6 mph on day 11 at time 16:16</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum gust speed</td><td> 40.3 mph  from 04 �( N ) on day 11 at time 16:15</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum heat index</td><td> 78.6�F on day 11 at time 15:25</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240811.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 12 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-dark">
+                <td>Average temperature</td><td> 63.2�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average humidity</td><td> 64%</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average dewpoint</td><td> 49.5�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average barometer</td><td> 29.7 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average windspeed</td><td> 2.1 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average gustspeed</td><td> 3.9 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average direction</td><td> 42� ( NE)</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for month</td><td> 0.54 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for year</td><td> 7.60 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum rain per minute</td><td> 0.00 in. on day 12 at time 23:59</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum temperature</td><td> 81.0�F on day 12 at time 15:05</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum temperature</td><td> 47.0�F on day 12 at time 06:39</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum humidity</td><td> 89% on day 12 at time 23:59</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum humidity</td><td> 31% on day 12 at time 11:13</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum pressure</td><td> 29.796 in. on day 12 at time 00:16</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum pressure</td><td> 29.642 in. on day 12 at time 19:45</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum windspeed</td><td> 13.8 mph on day 12 at time 15:04</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum gust speed</td><td> 19.6 mph  from 350 �( N ) on day 12 at time 15:05</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum heat index</td><td> 80.4�F on day 12 at time 15:03</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240812.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 13 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-light">
+                <td>Average temperature</td><td> 60.7�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average humidity</td><td> 69%</td>
+                </tr>
+<tr class="column-light">
+                <td>Average dewpoint</td><td> 49.2�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average barometer</td><td> 29.7 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Average windspeed</td><td> 4.4 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average gustspeed</td><td> 7.3 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average direction</td><td> 261� ( W )</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for month</td><td> 0.58 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for year</td><td> 7.64 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum rain per minute</td><td> 0.01 in. on day 13 at time 10:08</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum temperature</td><td> 73.8�F on day 13 at time 14:12</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum temperature</td><td> 49.2�F on day 13 at time 06:24</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum humidity</td><td> 97% on day 13 at time 07:22</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum humidity</td><td> 40% on day 13 at time 14:11</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum pressure</td><td> 29.742 in. on day 13 at time 15:00</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum pressure</td><td> 29.660 in. on day 13 at time 20:09</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum windspeed</td><td> 19.6 mph on day 13 at time 14:43</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum gust speed</td><td> 28.8 mph  from 237 �(WSW) on day 13 at time 14:49</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum heat index</td><td> 77.4�F on day 13 at time 17:04</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240813.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 14 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-dark">
+                <td>Average temperature</td><td> 61.9�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average humidity</td><td> 54%</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average dewpoint</td><td> 44.0�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average barometer</td><td> 29.7 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average windspeed</td><td> 5.9 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average gustspeed</td><td> 10.0 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average direction</td><td> 264� ( W )</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for month</td><td> 0.71 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for year</td><td> 7.77 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum rain per minute</td><td> 0.01 in. on day 14 at time 20:16</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum temperature</td><td> 74.2�F on day 14 at time 12:13</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum temperature</td><td> 50.4�F on day 14 at time 21:22</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum humidity</td><td> 85% on day 14 at time 20:37</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum humidity</td><td> 31% on day 14 at time 12:15</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum pressure</td><td> 29.847 in. on day 14 at time 21:55</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum pressure</td><td> 29.663 in. on day 14 at time 06:03</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum windspeed</td><td> 16.1 mph on day 14 at time 11:56</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum gust speed</td><td> 26.5 mph  from 294 �(WNW) on day 14 at time 11:50</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum heat index</td><td> 77.4�F on day 14 at time 14:33</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240814.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 15 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-light">
+                <td>Average temperature</td><td> 61.6�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average humidity</td><td> 51%</td>
+                </tr>
+<tr class="column-light">
+                <td>Average dewpoint</td><td> 41.8�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average barometer</td><td> 29.8 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Average windspeed</td><td> 3.8 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average gustspeed</td><td> 6.4 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average direction</td><td> 283� (WNW)</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for month</td><td> 0.78 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for year</td><td> 7.84 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum rain per minute</td><td> 0.02 in. on day 15 at time 23:48</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum temperature</td><td> 76.3�F on day 15 at time 15:13</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum temperature</td><td> 47.9�F on day 15 at time 07:02</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum humidity</td><td> 83% on day 15 at time 23:59</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum humidity</td><td> 27% on day 15 at time 10:52</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum pressure</td><td> 29.860 in. on day 15 at time 11:56</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum pressure</td><td> 29.762 in. on day 15 at time 18:02</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum windspeed</td><td> 15.0 mph on day 15 at time 15:46</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum gust speed</td><td> 23.0 mph  from 219 �( SW) on day 15 at time 15:46</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum heat index</td><td> 77.5�F on day 15 at time 15:11</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240815.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 16 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-dark">
+                <td>Average temperature</td><td> 64.0�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average humidity</td><td> 56%</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average dewpoint</td><td> 43.0�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average barometer</td><td> 29.8 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average windspeed</td><td> 3.1 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average gustspeed</td><td> 5.2 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average direction</td><td> 287� (WNW)</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for month</td><td> 0.84 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for year</td><td> 7.90 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum rain per minute</td><td> 0.01 in. on day 16 at time 01:29</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum temperature</td><td> 84.6�F on day 16 at time 17:17</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum temperature</td><td> 45.1�F on day 16 at time 06:43</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum humidity</td><td> 97% on day 16 at time 07:27</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum humidity</td><td> 17% on day 16 at time 17:57</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum pressure</td><td> 29.835 in. on day 16 at time 07:05</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum pressure</td><td> 29.741 in. on day 16 at time 17:16</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum windspeed</td><td> 16.1 mph on day 16 at time 12:10</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum gust speed</td><td> 26.5 mph  from 258 �(WSW) on day 16 at time 11:18</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum heat index</td><td> 81.7�F on day 16 at time 17:15</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240816.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 17 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-light">
+                <td>Average temperature</td><td> 66.5�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average humidity</td><td> 43%</td>
+                </tr>
+<tr class="column-light">
+                <td>Average dewpoint</td><td> 38.6�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average barometer</td><td> 29.8 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Average windspeed</td><td> 4.9 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average gustspeed</td><td> 7.7 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average direction</td><td> 247� (WSW)</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for month</td><td> 0.87 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for year</td><td> 7.93 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum rain per minute</td><td> 0.01 in. on day 17 at time 19:11</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum temperature</td><td> 86.0�F on day 17 at time 15:00</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum temperature</td><td> 42.2�F on day 17 at time 06:04</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum humidity</td><td> 81% on day 17 at time 05:44</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum humidity</td><td> 15% on day 17 at time 17:10</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum pressure</td><td> 29.847 in. on day 17 at time 20:28</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum pressure</td><td> 29.692 in. on day 17 at time 17:41</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum windspeed</td><td> 23.0 mph on day 17 at time 19:04</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum gust speed</td><td> 35.7 mph  from 233 �( SW) on day 17 at time 19:03</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum heat index</td><td> 82.7�F on day 17 at time 15:00</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240817.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 18 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-dark">
+                <td>Average temperature</td><td> 71.1�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average humidity</td><td> 41%</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average dewpoint</td><td> 44.8�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average barometer</td><td> 29.7 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average windspeed</td><td> 5.9 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average gustspeed</td><td> 9.6 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average direction</td><td> 266� ( W )</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for month</td><td> 0.89 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for year</td><td> 7.95 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum rain per minute</td><td> 0.01 in. on day 18 at time 21:06</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum temperature</td><td> 84.3�F on day 18 at time 17:19</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum temperature</td><td> 58.2�F on day 18 at time 06:15</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum humidity</td><td> 72% on day 18 at time 22:00</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum humidity</td><td> 21% on day 18 at time 17:27</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum pressure</td><td> 29.788 in. on day 18 at time 21:37</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum pressure</td><td> 29.645 in. on day 18 at time 06:56</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum windspeed</td><td> 20.7 mph on day 18 at time 12:45</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum gust speed</td><td> 28.8 mph  from 192 �(SSW) on day 18 at time 08:42</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum heat index</td><td> 81.6�F on day 18 at time 17:16</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240818.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 19 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-light">
+                <td>Average temperature</td><td> 63.9�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average humidity</td><td> 60%</td>
+                </tr>
+<tr class="column-light">
+                <td>Average dewpoint</td><td> 48.1�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average barometer</td><td> 29.8 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Average windspeed</td><td> 3.2 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average gustspeed</td><td> 5.2 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average direction</td><td> 269� ( W )</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for month</td><td> 0.96 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for year</td><td> 8.02 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum rain per minute</td><td> 0.01 in. on day 19 at time 21:32</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum temperature</td><td> 77.3�F on day 19 at time 14:31</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum temperature</td><td> 50.5�F on day 19 at time 06:39</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum humidity</td><td> 86% on day 19 at time 06:54</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum humidity</td><td> 35% on day 19 at time 14:43</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum pressure</td><td> 29.889 in. on day 19 at time 23:58</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum pressure</td><td> 29.714 in. on day 19 at time 01:05</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum windspeed</td><td> 16.1 mph on day 19 at time 20:26</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum gust speed</td><td> 26.5 mph  from 02 �( N ) on day 19 at time 20:26</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum heat index</td><td> 78.3�F on day 19 at time 14:30</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240819.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 20 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-dark">
+                <td>Average temperature</td><td> 64.2�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average humidity</td><td> 56%</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average dewpoint</td><td> 43.7�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average barometer</td><td> 29.8 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average windspeed</td><td> 2.8 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average gustspeed</td><td> 4.7 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average direction</td><td> 282� (WNW)</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for month</td><td> 0.96 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for year</td><td> 8.02 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum rain per minute</td><td> 0.00 in. on day 20 at time 23:59</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum temperature</td><td> 86.4�F on day 20 at time 13:18</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum temperature</td><td> 45.5�F on day 20 at time 06:27</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum humidity</td><td> 96% on day 20 at time 07:26</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum humidity</td><td> 19% on day 20 at time 13:14</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum pressure</td><td> 29.908 in. on day 20 at time 07:22</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum pressure</td><td> 29.796 in. on day 20 at time 15:10</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum windspeed</td><td> 18.4 mph on day 20 at time 18:37</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum gust speed</td><td> 26.5 mph  from 252 �(WSW) on day 20 at time 18:45</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum heat index</td><td> 83.3�F on day 20 at time 13:18</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240820.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 21 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-light">
+                <td>Average temperature</td><td> 65.2�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average humidity</td><td> 47%</td>
+                </tr>
+<tr class="column-light">
+                <td>Average dewpoint</td><td> 42.5�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average barometer</td><td> 29.8 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Average windspeed</td><td> 6.2 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average gustspeed</td><td> 9.8 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average direction</td><td> 261� ( W )</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for month</td><td> 0.96 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for year</td><td> 8.02 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum rain per minute</td><td> 0.00 in. on day 21 at time 23:59</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum temperature</td><td> 81.9�F on day 21 at time 13:31</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum temperature</td><td> 46.1�F on day 21 at time 04:16</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum humidity</td><td> 79% on day 21 at time 05:45</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum humidity</td><td> 24% on day 21 at time 13:09</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum pressure</td><td> 29.835 in. on day 21 at time 01:29</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum pressure</td><td> 29.667 in. on day 21 at time 16:24</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum windspeed</td><td> 17.3 mph on day 21 at time 17:35</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum gust speed</td><td> 32.2 mph  from 288 �(WNW) on day 21 at time 17:35</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum heat index</td><td> 80.1�F on day 21 at time 13:31</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240821.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 22 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-dark">
+                <td>Average temperature</td><td> 63.5�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average humidity</td><td> 58%</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average dewpoint</td><td> 46.8�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average barometer</td><td> 29.7 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average windspeed</td><td> 3.2 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average gustspeed</td><td> 5.3 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average direction</td><td> 301� (WNW)</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for month</td><td> 1.05 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for year</td><td> 8.11 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum rain per minute</td><td> 0.01 in. on day 22 at time 19:16</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum temperature</td><td> 76.2�F on day 22 at time 13:51</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum temperature</td><td> 51.4�F on day 22 at time 23:59</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum humidity</td><td> 94% on day 22 at time 23:59</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum humidity</td><td> 32% on day 22 at time 13:51</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum pressure</td><td> 29.755 in. on day 22 at time 23:51</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum pressure</td><td> 29.633 in. on day 22 at time 06:44</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum windspeed</td><td> 12.7 mph on day 22 at time 16:39</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum gust speed</td><td> 19.6 mph  from 164 �(SSE) on day 22 at time 05:07</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum heat index</td><td> 77.5�F on day 22 at time 13:50</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240822.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 23 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-light">
+                <td>Average temperature</td><td> 60.7�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average humidity</td><td> 67%</td>
+                </tr>
+<tr class="column-light">
+                <td>Average dewpoint</td><td> 47.9�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average barometer</td><td> 29.8 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Average windspeed</td><td> 2.8 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average gustspeed</td><td> 5.1 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average direction</td><td> 271� ( W )</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for month</td><td> 1.09 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for year</td><td> 8.15 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum rain per minute</td><td> 0.01 in. on day 23 at time 22:55</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum temperature</td><td> 75.6�F on day 23 at time 11:25</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum temperature</td><td> 45.8�F on day 23 at time 06:38</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum humidity</td><td> 97% on day 23 at time 07:30</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum humidity</td><td> 37% on day 23 at time 18:40</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum pressure</td><td> 29.834 in. on day 23 at time 22:24</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum pressure</td><td> 29.665 in. on day 23 at time 18:18</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum windspeed</td><td> 18.4 mph on day 23 at time 18:40</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum gust speed</td><td> 27.6 mph  from 298 �(WNW) on day 23 at time 22:03</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum heat index</td><td> 77.7�F on day 23 at time 11:24</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240823.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 24 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-dark">
+                <td>Average temperature</td><td> 65.0�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average humidity</td><td> 50%</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average dewpoint</td><td> 44.5�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average barometer</td><td> 29.7 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average windspeed</td><td> 5.3 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average gustspeed</td><td> 8.7 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average direction</td><td> 250� (WSW)</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for month</td><td> 1.09 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for year</td><td> 8.15 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum rain per minute</td><td> 0.00 in. on day 24 at time 23:59</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum temperature</td><td> 77.4�F on day 24 at time 13:42</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum temperature</td><td> 48.6�F on day 24 at time 04:03</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum humidity</td><td> 90% on day 24 at time 02:51</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum humidity</td><td> 30% on day 24 at time 18:49</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum pressure</td><td> 29.778 in. on day 24 at time 00:20</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum pressure</td><td> 29.683 in. on day 24 at time 19:04</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum windspeed</td><td> 17.3 mph on day 24 at time 12:02</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum gust speed</td><td> 31.1 mph  from 269 �( W ) on day 24 at time 05:16</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum heat index</td><td> 77.9�F on day 24 at time 13:41</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240824.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 25 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-light">
+                <td>Average temperature</td><td> 64.4�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average humidity</td><td> 48%</td>
+                </tr>
+<tr class="column-light">
+                <td>Average dewpoint</td><td> 42.4�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average barometer</td><td> 29.8 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Average windspeed</td><td> 5.4 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average gustspeed</td><td> 9.2 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average direction</td><td> 270� ( W )</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for month</td><td> 1.46 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for year</td><td> 8.52 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum rain per minute</td><td> 0.01 in. on day 25 at time 23:03</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum temperature</td><td> 76.0�F on day 25 at time 12:47</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum temperature</td><td> 50.0�F on day 25 at time 23:59</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum humidity</td><td> 93% on day 25 at time 23:59</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum humidity</td><td> 24% on day 25 at time 12:30</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum pressure</td><td> 29.923 in. on day 25 at time 22:26</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum pressure</td><td> 29.657 in. on day 25 at time 03:08</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum windspeed</td><td> 25.3 mph on day 25 at time 12:53</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum gust speed</td><td> 38.0 mph  from 227 �( SW) on day 25 at time 12:52</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum heat index</td><td> 77.4�F on day 25 at time 16:23</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240825.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 26 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-dark">
+                <td>Average temperature</td><td> 58.6�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average humidity</td><td> 66%</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average dewpoint</td><td> 44.4�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average barometer</td><td> 29.9 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average windspeed</td><td> 3.0 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average gustspeed</td><td> 5.0 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average direction</td><td> 254� (WSW)</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for month</td><td> 1.46 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for year</td><td> 8.52 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum rain per minute</td><td> 0.00 in. on day 26 at time 23:59</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum temperature</td><td> 74.4�F on day 26 at time 17:25</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum temperature</td><td> 47.4�F on day 26 at time 02:56</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum humidity</td><td> 97% on day 26 at time 07:59</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum humidity</td><td> 29% on day 26 at time 17:22</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum pressure</td><td> 29.981 in. on day 26 at time 23:24</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum pressure</td><td> 29.866 in. on day 26 at time 00:32</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum windspeed</td><td> 17.3 mph on day 26 at time 15:16</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum gust speed</td><td> 29.9 mph  from 265 �( W ) on day 26 at time 15:13</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum heat index</td><td> 77.5�F on day 26 at time 11:23</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240826.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 27 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-light">
+                <td>Average temperature</td><td> 58.9�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average humidity</td><td> 54%</td>
+                </tr>
+<tr class="column-light">
+                <td>Average dewpoint</td><td> 39.6�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average barometer</td><td> 29.9 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Average windspeed</td><td> 2.2 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average gustspeed</td><td> 4.1 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average direction</td><td> 22� (NNE)</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for month</td><td> 1.46 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for year</td><td> 8.52 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum rain per minute</td><td> 0.00 in. on day 27 at time 23:59</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum temperature</td><td> 79.0�F on day 27 at time 14:44</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum temperature</td><td> 39.5�F on day 27 at time 06:49</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum humidity</td><td> 89% on day 27 at time 07:07</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum humidity</td><td> 21% on day 27 at time 14:56</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum pressure</td><td> 30.013 in. on day 27 at time 06:56</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum pressure</td><td> 29.846 in. on day 27 at time 17:35</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum windspeed</td><td> 17.3 mph on day 27 at time 14:03</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum gust speed</td><td> 21.9 mph  from 253 �(WSW) on day 27 at time 14:02</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum heat index</td><td> 78.5�F on day 27 at time 14:45</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240827.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 28 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-dark">
+                <td>Average temperature</td><td> 67.4�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average humidity</td><td> 33%</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average dewpoint</td><td> 33.6�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average barometer</td><td> 29.7 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average windspeed</td><td> 5.1 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average gustspeed</td><td> 8.3 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average direction</td><td> 254� (WSW)</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for month</td><td> 1.46 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for year</td><td> 8.52 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum rain per minute</td><td> 0.00 in. on day 28 at time 23:59</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum temperature</td><td> 80.5�F on day 28 at time 15:55</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum temperature</td><td> 43.4�F on day 28 at time 03:35</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum humidity</td><td> 81% on day 28 at time 03:35</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum humidity</td><td> 17% on day 28 at time 17:57</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum pressure</td><td> 29.864 in. on day 28 at time 00:19</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum pressure</td><td> 29.604 in. on day 28 at time 17:23</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum windspeed</td><td> 17.3 mph on day 28 at time 05:08</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum gust speed</td><td> 29.9 mph  from 238 �(WSW) on day 28 at time 05:08</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum heat index</td><td> 78.8�F on day 28 at time 15:52</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240828.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 29 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-light">
+                <td>Average temperature</td><td> 63.3�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average humidity</td><td> 36%</td>
+                </tr>
+<tr class="column-light">
+                <td>Average dewpoint</td><td> 35.0�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average barometer</td><td> 29.7 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Average windspeed</td><td> 2.3 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average gustspeed</td><td> 4.3 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average direction</td><td> 106� (ESE)</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for month</td><td> 1.46 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for year</td><td> 8.52 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum rain per minute</td><td> 0.00 in. on day 29 at time 23:59</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum temperature</td><td> 74.7�F on day 29 at time 11:48</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum temperature</td><td> 50.6�F on day 29 at time 07:40</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum humidity</td><td> 62% on day 29 at time 21:34</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum humidity</td><td> 25% on day 29 at time 14:59</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum pressure</td><td> 29.918 in. on day 29 at time 23:40</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum pressure</td><td> 29.569 in. on day 29 at time 04:05</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum windspeed</td><td> 9.2 mph on day 29 at time 11:30</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum gust speed</td><td> 15.0 mph  from 087 �( E ) on day 29 at time 11:27</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum heat index</td><td> 76.7�F on day 29 at time 11:47</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240829.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 30 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-dark">
+                <td>Average temperature</td><td> 58.7�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average humidity</td><td> 52%</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average dewpoint</td><td> 38.7�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average barometer</td><td> 30.0 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average windspeed</td><td> 2.0 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average gustspeed</td><td> 3.7 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average direction</td><td> 76� (ENE)</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for month</td><td> 1.46 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for year</td><td> 8.52 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum rain per minute</td><td> 0.00 in. on day 30 at time 23:59</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum temperature</td><td> 75.9�F on day 30 at time 14:28</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum temperature</td><td> 38.1�F on day 30 at time 06:55</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum humidity</td><td> 90% on day 30 at time 07:18</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum humidity</td><td> 25% on day 30 at time 15:19</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum pressure</td><td> 30.016 in. on day 30 at time 07:37</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum pressure</td><td> 29.909 in. on day 30 at time 00:41</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum windspeed</td><td> 13.8 mph on day 30 at time 13:43</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum gust speed</td><td> 19.6 mph  from 043 �( NE) on day 30 at time 13:32</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum heat index</td><td> 77.5�F on day 30 at time 10:11</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240830.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Aug 31 Average and Extremes</td>
+                    </tr>
+                    <tr class="column-light">
+                <td>Average temperature</td><td> 60.3�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average humidity</td><td> 40%</td>
+                </tr>
+<tr class="column-light">
+                <td>Average dewpoint</td><td> 30.4�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average barometer</td><td> 30.0 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Average windspeed</td><td> 2.5 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average gustspeed</td><td> 4.8 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average direction</td><td> 59� (ENE)</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for month</td><td> 1.46 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for year</td><td> 8.52 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum rain per minute</td><td> 0.00 in. on day 31 at time 23:57</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum temperature</td><td> 82.2�F on day 31 at time 12:48</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum temperature</td><td> 37.9�F on day 31 at time 06:39</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum humidity</td><td> 78% on day 31 at time 07:23</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum humidity</td><td> 11% on day 31 at time 11:51</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum pressure</td><td> 30.001 in. on day 31 at time 07:25</td>
+                </tr>
+<tr class="column-dark">
+                <td>Minimum pressure</td><td> 29.892 in. on day 31 at time 17:59</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum windspeed</td><td> 15.0 mph on day 31 at time 12:18</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum gust speed</td><td> 21.9 mph  from 058 �(ENE) on day 31 at time 12:42</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum heat index</td><td> 79.8�F on day 31 at time 12:48</td>
+                </tr>
+</table>
+24 Hour Graph of this day is not available (20240831.gif)<br/> <br/>
+<br /><br />
+                    <table cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Average and Extremes for Month of August 2024 up to day 31</td>
+                    </tr>
+                    <tr class="column-dark">
+                <td>Average temperature</td><td> 63.5�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average humidity</td><td> 54%</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average dewpoint</td><td> 43.5�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Average barometer</td><td> 29.792 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average windspeed</td><td> 3.6 mph</td>
+                </tr>
+<tr class="column-light">
+                <td>Average gustspeed</td><td> 6.1 mph</td>
+                </tr>
+<tr class="column-dark">
+                <td>Average direction</td><td> 280� ( W )</td>
+                </tr>
+<tr class="column-light">
+                <td>Rainfall for month</td><td> 1.44 in.</td>
+                </tr>
+<tr class="column-dark">
+                <td>Rainfall for year</td><td> 8.59 in.</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum rain per minute</td><td> 0.03 in on day 09 at time 11:20</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum temperature</td><td> 92.4�F on day 04 at time 13:41</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum temperature</td><td> 37.9�F on day 31 at time 06:39</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum humidity</td><td> 97% on day 26 at time 07:59</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum humidity</td><td> 9% on day 02 at time 12:29</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum pressure</td><td> 30.02 in. on day 30 at time 07:37</td>
+                </tr>
+<tr class="column-light">
+                <td>Minimum pressure</td><td> 29.57 in. on day 29 at time 04:05</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum windspeed</td><td> 27.6 mph from 04�( N ) on day 11 at time 16:16</td>
+                </tr>
+<tr class="column-light">
+                <td>Maximum gust speed</td><td> 40.3 mph from 360�( N ) on day 11 at time 16:15</td>
+                </tr>
+<tr class="column-dark">
+                <td>Maximum heat index</td><td> 88.7�F on day 04 at time 13:41</td>
+                </tr>
+<tr class="column-light">
+                <td>Avg daily max temp</td><td>79.6�F</td>
+                </tr>
+<tr class="column-dark">
+                <td>Avg daily min temp</td><td>47.4�F</td>
+                </tr>
+<tr class="column-light">
+                <td>Growing degrees days</td><td>492.3 GDD</td>
+                </tr>
+</table>
+<br /><br />
+                    <table width="400" cellpadding="3" cellspacing="0" border="0">
+                    <tr class="table-top">
+                    <td colspan="2">Daily Rain Totals</td>
+                    </tr>
+                    <tr class="column-dark">
+                <td>00.01 in.  on day 2</td>
+                </tr>
+<tr class="column-light">
+                <td>00.01 in.  on day 4</td>
+                </tr>
+<tr class="column-dark">
+                <td>00.11 in.  on day 5</td>
+                </tr>
+<tr class="column-light">
+                <td>00.01 in.  on day 6</td>
+                </tr>
+<tr class="column-dark">
+                <td>00.06 in.  on day 7</td>
+                </tr>
+<tr class="column-light">
+                <td>00.25 in.  on day 9</td>
+                </tr>
+<tr class="column-dark">
+                <td>00.09 in.  on day 10</td>
+                </tr>
+<tr class="column-light">
+                <td>00.04 in.  on day 13</td>
+                </tr>
+<tr class="column-dark">
+                <td>00.13 in.  on day 14</td>
+                </tr>
+<tr class="column-light">
+                <td>00.07 in.  on day 15</td>
+                </tr>
+<tr class="column-dark">
+                <td>00.06 in.  on day 16</td>
+                </tr>
+<tr class="column-light">
+                <td>00.03 in.  on day 17</td>
+                </tr>
+<tr class="column-dark">
+                <td>00.02 in.  on day 18</td>
+                </tr>
+<tr class="column-light">
+                <td>00.07 in.  on day 19</td>
+                </tr>
+<tr class="column-dark">
+                <td>00.09 in.  on day 22</td>
+                </tr>
+<tr class="column-light">
+                <td>00.04 in.  on day 23</td>
+                </tr>
+<tr class="column-dark">
+                <td>00.37 in.  on day 25</td>
+                </tr>
+</table>
+
+
+</div><!-- end main-copy -->
+
+	</div>
+  </div>
+  <!--end content -->
+  <div id="navBar">
+    <div id="advert">
+        <p><a href="webcam.php"><img src="estesparkwebcam.jpg" alt="Estes Park, CO Webcam facing West" width="120" height="90" /></a></p>
+	  <p>Estes Park <a href="webcam.php">live netcam</a>.</p>
+    </div>
+   
+    <div id="headlines">
+          <script type="text/javascript" src="ajaxWDwx3.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89978794-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<style type="text/css">
+<!--
+.style2 {color: #990000;
+	font-weight: bold;
+}
+-->
+</style>
+<h2>Current Conditions</h2>
+<!--<h4 class="codebox">Updated 10/14/2019 -Weather Station and webcam updating once again. Thanks, Greg</h4>-->
+<table width="95%" border="0" cellspacing="1" cellpadding="1">
+  <tr> 
+
+    <td colspan="2" class="meas" style="text-align: center;">
+  <p class="style1">
+
+<span class="ajax"><strong> @</strong></span>  
+	    <span class="ajax" id="ajaxdate">25-Sep-2024 3:20am</span> 
+	    <span class="ajax" id="ajaxtime"></span>
+<script type="text/javascript">
+<!--
+document.write('<br />updated <span id="ajaxcounter"></span>&nbsp;sec ago');
+//-->
+</script>
+	<noscript>
+	<p><br />
+	  [Enable JavaScript for live updates]</p>
+	</noscript>
+  </tr>
+  <tr> 
+    <td colspan="2" class="bigtemp"><span class="ajax" id="ajaxtemp">
+	37.3</span>
+    <span style="font-size: x-small"> &deg;F </span>
+	<span class="ajax" id="ajaxtemparrow">
+    <img src="/images/falling.gif" alt="Colder 1.4&deg;F than last hour." title="Colder 1.4&deg;F than last hour." width="7" height="8" style="border: 0; margin: 1px 3px;" /></span></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="data" style="text-align: center;" align="center"><img src="./images/night_clear.gif" alt="Dry, Night time/Dry" title="Dry, Night time/Dry" height="25" width="25" 
+			 style="float: left;" />&nbsp;Dry<br />Night time/Dry	</td>
+  </tr>
+  <tr>
+    <td class="meas">Feels Like:</td>
+    <td class="data"><span class="ajax" id="ajaxfeelslike">37</span>&deg;F</td>
+  </tr>
+  <tr> 
+    <td class="meas">Humidity:</td>
+    <td class="data"><span class="ajax" id="ajaxhumidity">84</span>%<img src="/images/rising.gif" alt="Increased 1% since last hour." title="Increased 1% since last hour." width="7" height="8" style="border: 0; margin: 1px 3px;" /></td>
+  </tr>
+  <tr> 
+    <td class="meas">Dew Point:</td>
+    <td class="data"><span class="ajax" id="ajaxdew">32.9</span>&deg;F<img src="/images/falling.gif" alt="Decreased 1.1&deg;F since last hour." title="Decreased 1.1&deg;F since last hour." width="7" height="8" style="border: 0; margin: 1px 3px;" /></td>
+  </tr>
+  <tr> 
+    <td class="meas">Wind</td>
+    <td class="data"><span class="ajax" id="ajaxwindicon">Calm<br />---</span> 
+			 <span class="ajax" id="ajaxwinddir"></span> 
+			 <span class="ajax" id="ajaxwind"></span><span class="ajax" id="ajaxwinduom">&nbsp;mph</span></td>
+  </tr>
+  <tr> 
+    <td class="meas">Gust:</td>
+    <td class="data"><span class="ajax" id="ajaxgust">0.0</span><span class="ajax" id="ajaxgustuom">&nbsp;mph</span></td>
+  </tr>
+  <tr> 
+    <td class="meas">Pressure:</td>
+    <td class="data"><span class="ajax" id="ajaxbaro">29.90</span> in<img src="/images/rising.gif" alt="Rising 0.008 inHg/hour" title="Rising 0.008 inHg/hour" width="7" height="8" style="border: 0; margin: 1px 3px;" /><br />
+             </td>
+  </tr>
+  <tr> 
+    <!--<td class="meas">Solar Rad*<br />
+      <strong>*Littleton, CO
+    :</strong></td>
+    <td class="data">%<br />
+    W/m<sup>2</sup>	</td>
+  </tr>
+  <tr> 
+    <td class="meas"><a href="uv-index.php">UV Index*:<br />
+    </a><strong>*Littleton, CO</strong></td>
+    <td class="data"><br />None</td>-->
+  </tr>
+  <tr> 
+    <td class="meas">Rain Today:</td>
+    <td class="data" ><span class="ajax" id="ajaxrain">0.00</span> in</td>
+  </tr>
+  <tr> 
+    <td class="meas">Rain Rate:</td>
+    <td class="data"><span class="ajax" id="ajaxrainratehr">0.000</span> in</td>
+  </tr>
+  <tr> 
+    <td class="meas">Storm Rain:</td>
+    <td class="data" > in</td>
+  </tr>
+  <tr> 
+    <td class="meas">Rain Month:</td>
+    <td class="data" ><span class="ajax" id="ajaxrainmo">0.83</span> in</td>
+  </tr>
+  <tr> 
+    <td class="meas">Rain Year:</td>
+    <td class="data" ><span class="ajax" id="ajaxrainyr">9.42</span> in</td>
+  </tr>
+</table>
+<br>
+<h2>Outlook</h2>
+<table width="95%" border="0" cellspacing="1" cellpadding="1">
+  <tr>
+   <td class="meas" valign="top" align="center" style="text-align: center;font-size: 8pt;"><strong>Overnight<br/><br/></strong><img src="./forecast/images/nskc.jpg" alt="Overnight: Clear" title="Overnight: Clear, with a low around 43. West wind around 5 mph." /><br/>Clear <br/><br />Lo <span style="color: #0000FF;">43 &deg;F</span>  </td>
+ <td class="meas" valign="top" align="center" style="text-align: center;font-size: 8pt;"><strong>Wednesday<br/><br/></strong><img src="./forecast/images/skc.jpg" alt="Wednesday: Sunny" title="Wednesday: Sunny. High near 77, with temperatures falling to around 75 in the afternoon. South southwest wind 2 to 8 mph." /><br/>Sunny <br/><br />Hi <span style="color: #FF0000;">77 &deg;F</span>  </td>
+  </tr>
+</table>
+
+<h2>Almanac</h2>
+<table width="95%" border="0" cellspacing="1" cellpadding="1">
+  <tr> 
+    <td class="meas">Sunrise:</td>
+    <td class="data">6:53 am</td>
+  </tr>
+  <tr> 
+    <td class="meas">Sunset:</td>
+    <td class="data">6:54 pm</td>
+  </tr>
+             <tr>
+             <td class="meas">Moonrise:</td>
+             <td class="data">11:34 pm</td>
+           </tr>
+           <tr>
+             <td class="meas">Moonset:</td>
+             <td class="data">3:33 pm</td>
+           </tr>
+
+  <tr> 
+    <td colspan="2" class="meas" align="center">
+	         <table border="0" cellpadding="4" cellspacing="0">
+           <tr>
+             <td style="text-align: center;" class="data"></td>
+           </tr>
+           <tr>
+             <td style="text-align: center;"><img src="/images/moon22.gif" alt="" title="" 
+			 width="48" height="48" style="border: 0;" /></td>
+           </tr>
+		   <tr>
+             <td style="text-align: center;" class="data" >44%<br />
+              Illuminated</td>
+           </tr>
+         </table>
+</td>
+  </tr>
+</table> 
+<h2>Daily Min/Max</h2>
+<table width="95%" border="0" cellspacing="1" cellpadding="1">
+  <tr> 
+    <td class="meas">Temp Hi:</td>
+    <td class="data">43.0&deg;F<br />               
+              12:00am</td>
+  </tr>
+  <tr> 
+    <td class="meas">Temp Lo:</td>
+    <td class="data">37.3&deg;F<br />               
+              3:19am</td>
+  </tr>
+  <tr> 
+    <td class="meas">High Wind Speed:</td>
+    <td class="data">0.0 mph<br />
+      12:31pm</td>
+  </tr>
+  <tr> 
+    <!--<td class="meas"><p><a href="uv-index.php">High UV*</a>:<br />
+    Littleton, CO </p>
+    </td>
+    <td class="data"><br />None<br />5:00pm    </td>
+  </tr>
+  <tr> 
+    <td class="meas"><p>High Solar*:<br />
+    Littleton, CO </p>
+    </td>
+    <td class="data"> <br />5:00pm</td>-->
+  </tr>
+  <tr> 
+    <td class="meas">High Rain Rate:</td>
+    <td class="data">0.000in/min<br />
+      5:00pm</td>
+  </tr>
+  <tr> 
+    <td class="meas">High Hourly<br />
+      Rain Rate:</td>
+    <td class="data">0.000 in/hr</td>
+  </tr>
+</table>
+<h2>Location</h2>
+<table width="95%" border="0" cellspacing="1" cellpadding="1">
+  <tr> 
+    <td class="meas">Elevation:</td>
+    <td class="data">0 ft</td>
+  </tr>
+  <tr> 
+    <td class="meas">Latitude:</td>
+    <td class="data">40:23:00N</td>
+  </tr>
+  <tr> 
+    <td class="meas">Longitude:</td>
+    <td class="data">105:29:00W</td>
+  </tr>
+</table>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- sidebar -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6752802857747974"
+     data-ad-slot="9980404847"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        </div>
+  </div>
+
+  <!--end navbar -->
+<div id="siteInfo">
+    
+<table width="100%" style="border: 0">
+  <tr>
+    <td>Quote from the patron saint of the webmaster, St. Alphonsus Liguori : <br />
+   
+                  <em>&quot;My Jesus, Thou alone   art sufficient for me.&nbsp; My love, do not permit me to separate myself from Thee.&nbsp;   When shall I be able to say, 'My God, I cannot lose thee any more?' </em> &quot; <br />
+                  <p>&nbsp;&copy;2007 EstesParkWeather.net and <a href="http://www.exceptionalweather.com">ExceptionalWeather.com</a>. EstesParkWeather.net is part of the <a href="http://www.exceptionalweather.com">ExceptionalWeather Network</a><br />
+              <small>Radar/maps &copy; <a href="http://www.weatherunderground.com/">Weather Underground</a>. Used with permission.</small> &nbsp;&nbsp; <a href="http://validator.w3.org/check?uri=referer"> Valid XHTML 1.0</a> &nbsp;&nbsp;&nbsp; <a href="http://jigsaw.w3.org/css-validator/"> Valid CSS </a><br />
+    Never base important decisions on this or any weather information obtained from the Internet.</p>    </td>
+  </tr>
+</table>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1605141-1";
+urchinTracker();
+</script>
+
+</div>
+</body>
+</html>
