@@ -1,0 +1,23 @@
+# climate_data is the dict returned
+climate_data:
+  css: "tr"  # Assuming each climate entry is in a row
+  multiple: true  # Extract multiple entries
+  children:
+    date:
+      css: "td:nth-child(1)"
+      multiple: false
+    air_temperature_minimum:
+      css: ".blue-color"
+      multiple: false
+    air_temperature_average:
+      css: ".green-color"
+      multiple: false
+    air_temperature_maximum:
+      css: ".red-color"
+      multiple: false
+    air_temperature_departure_from_normal:
+      css: ".green-color:nth-child(5), .red-color:nth-child(5), .blue-color:nth-child(5)"
+      multiple: false
+    precipitation:
+      css: "td:nth-child(6)"
+      multiple: false
