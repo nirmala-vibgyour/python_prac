@@ -75,7 +75,7 @@ pdf.cell(w=50, h=5, txt="Self Employed Tutor", ln=1)
 pdf.set_font(family="Times", size=8, style="B")
 pdf.cell(w=50, h=5, txt="April, 12 - March, 22", ln=1)
 pdf.set_xy(25, 145)
-# pdf.cell(w=50, h=5, txt="- given tuition to students from standard 6 - 12", ln=1)
+pdf.cell(w=50, h=5, txt="- given tuition to students from standard 6 - 12", ln=1)
 
 pdf.set_x(10)
 pdf.set_font(family="Times", size=14, style="B")
@@ -97,19 +97,19 @@ pdf.set_font(family="Times", size=8, style="B")
 # pdf.cell(w=50, h=5, txt="- Other languages: Fortran, C++",ln=1)
 data = [
     ['Cloud Platforms', 'Azure, AWS'],
-    ['Infrastructure Provisioning Tools', 'Terraform, Azure Resource Manager'],
-    ['Configuration Management', 'Ansible'],
-    ['CI/CD Tools', 'Azure Pipline, Jenkins'],
-    ['Build Tools', 'Maven, Webpack'],
+    ['Infrastructure Provisioning Tools', 'Terraform'],
+    #['Configuration Management', 'Ansible'],
+    ['CI/CD Tools', 'Jenkins'],
+    ['Build Tools', 'Maven'],
     ['Containerization Tools', 'Docker, Kubernetes'],
-    ['Source Code Management', 'Bitbucket, GitHub'],
-    ['Logging & Monitoring Tools', 'Prometheus, Azure Monitor'],
+    ['Source Code Management', 'GitHub'],
+    ['Logging & Monitoring Tools', 'Prometheus'],
     ['Visualization Tool', 'Grafana'],
-    ['Scripting & Programming Languages', 'PowerShell, Bash/Shell, Python, JavaScript, YAML'],
+    ['Scripting & Programming Languages', 'PowerShell, Python, JavaScript, YAML'],
     ['Framework', 'Flask, Django, LoopBack'],
-    ['Application/Web Servers', 'Apache Tomcat'],
+    ['Application/Web Servers', 'Apache Tomcat, Nginx'],
     ['Operating System', 'Linux, Windows'],
-    ['Bug Tracking Tools', 'JIRA, Azure Boards'],
+    ['Bug Tracking Tools', 'JIRA'],
     ['Project Managing Tool', 'Asana']
 ]
 
@@ -143,7 +143,7 @@ pdf.cell(w=50, h=5, txt="- BSc. (Physics)       [2013 - 2015]", ln=1)
 pdf.set_x(25)
 
 
-pdf.output("resumeActual.pdf")
+pdf.output("main.pdf")
 
 
 

@@ -18,21 +18,14 @@ pdf.set_font('Times', 'B', 8)
 
 # Sample data
 data = [
-    ['Cloud Platforms', 'Azure, AWS'],
-    ['Infrastructure Provisioning Tools', 'Terraform, Azure Resource Manager'],
-    ['Configuration Management', 'Ansible'],
-    ['CI/CD Tools', 'Azure Pipline, Jenkins'],
-    ['Build Tools', 'Maven, Webpack'],
-    ['Containerization Tools', 'Docker, Kubernetes'],
-    ['Source Code Management', 'Bitbucket, GitHub'],
-    ['Logging & Monitoring Tools', 'Prometheus, Azure Monitor'],
-    ['Visualization Tool', 'Grafana'],
-    ['Scripting & Programming Languages', 'PowerShell, Bash/Shell, Python, JavaScript, YAML'],
-    ['Framework', 'Flask, Django, LoopBack'],
-    ['Application/Web Servers', 'Apache Tomcat'],
-    ['Operating System', 'Linux, Windows'],
-    ['Bug Tracking Tools', 'JIRA, Azure Boards'],
-    ['Project Managing Tool', 'Asana']
+    ['Source Code Management', 'GitHub', '***'],
+    ['Logging & Monitoring Tools', 'Prometheus', '***'],
+    ['Visualization Tool', 'Grafana', '***'],
+    ['Scripting & Programming Languages', 'Python', '***'],
+    ['Framework', 'Flask', '**'],
+    ['Application/Web Servers', 'Apache, Nginx', '**'],
+    ['Operating System', 'Linux, Windows', '***'],
+    ['Bug Tracking Tools', 'JIRA','***']
 ]
 
 # Create the table
