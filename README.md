@@ -1,6 +1,6 @@
 # Python Practice Projects
 
-This repository contains a collection of small, self-contained Python projects and mini-apps, each focused on a specific concept or library. It serves as a personal learning playground as well as a showcase of my hands-on experience with Python.
+This repository contains a collection of small, self-contained Python projects and mini-apps, each focused on a specific concept or library. It serves as a learning space as well as a showcase of my hands-on experience with Python.
 
 ## 📁 Project Structure
 
