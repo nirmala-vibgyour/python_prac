@@ -5,8 +5,8 @@ import os
 import time
 import sqlite3
 
-"INSERT INTO events VALUES ('Tigers', 'Tiger City', '2088.10.14')"
-"SELECT * FROM events WHERE date='2088.10.15'"
+# "INSERT INTO events VALUES ('Tigers', 'Tiger City', '2088.10.14')"
+# "SELECT * FROM events WHERE date='2088.10.15'"
 
 URL = "http://programmer100.pythonanywhere.com/tours/"
 HEADERS = {

@@ -46,3 +46,15 @@
 /createPythonPackage/invoicing/__pychache__
 /createPythonPackage/test
 /files/read.txt
+/PyPI-Recovery-Codes-nirmala_1234-2024-08-25T11_45_55.730518.txt
+**/__pycache__
+**/.venv
+**/.idea
+**/**.db
+**/**.sqbpro
+**/**/__pycache__
+**/**/.venv
+**/**/.idea
+/images
+/apis/api_basic/node_modules
+/.ipynb_checkpoints
