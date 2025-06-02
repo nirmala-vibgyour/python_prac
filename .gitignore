@@ -3,6 +3,6 @@
 **/.idea/
 **/*.db
 **/*.sqbpro
-/images/
-/apis/api_basic/node_modules/
+*.png
+*.jpg
 /.ipynb_checkpoints/
