@@ -6,3 +6,5 @@
 *.png
 *.jpg
 /.ipynb_checkpoints/
+/images/*.png
+/images/*.jpg
